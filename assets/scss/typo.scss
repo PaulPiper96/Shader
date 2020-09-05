@@ -1,0 +1,46 @@
+h1,
+.h1 {
+  font-size: 4.4rem;
+  font-weight: bolder;
+  margin: 0;
+  line-height: 1;
+}
+@media (min-width: map-get($grid-breakpoints, sm)) {
+  h1,
+  .h1 {
+    font-size: 6rem;
+  }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+  h1,
+  .h1 {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+  h1,
+  .h1 {
+    font-size: 8rem;
+  }
+}
+h2,
+.h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+h3,
+.h3 {
+  font-size: 2.6rem;
+  font-weight: bolder;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  @include transition(opacity 0.2s ease);
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
