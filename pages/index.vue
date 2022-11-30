@@ -174,9 +174,9 @@ float y = sin(x * frequency);
 float t = 0.01*(time*-0.07);
 y += sin(x*frequency*2.1 + t)*4.5;
 y += sin(x*frequency*1.72 + t*1.121)*4.0;
-y += sin(x*frequency*2.221 + t*0.437)*5.0;
+y = sin(x*frequency*2.221 + t*0.437)*5.0;
 y += sin(x*frequency*3.1122+ t*4.269)*2.5;
-y *= amplitude*0.6;
+y *= amplitude*0.2;
 // -----------------------------------------------------------------------------------------------------------------
 
 
@@ -217,8 +217,6 @@ vec3 secondcircleshape= vec3( secondcircle+ pattern);
 
 combined=secondcircleshape*combined;
 
-//Make more Circles
-// -----------------------------------------------------------------------------------------------------------------
 
 
 
@@ -241,57 +239,7 @@ combined=secondcircleshape*combined;
 // -----------------------------------------------------------------------------------------------------------------
 
 
-//Make more Circles
-// -----------------------------------------------------------------------------------------------------------------
-makemousealittlesmoother= vMouse*0.85;
-secondcircle = circleShape(vec2(st.x,st.y),0.075,vec2 (-0.85+makemousealittlesmoother.x, 0.06+makemousealittlesmoother.y));
-secondcircleshape= vec3( secondcircle+ pattern);
-combined=secondcircleshape*combined;
-//Make more Circles
-// -----------------------------------------------------------------------------------------------------------------
 
-
-
-//Make more Circles
-// -----------------------------------------------------------------------------------------------------------------
-makemousealittlesmoother= vMouse*0.85;
-secondcircle = circleShape(vec2(st.x,st.y),0.025,vec2 (0.5-makemousealittlesmoother.x, 0.05+makemousealittlesmoother.y));
-secondcircleshape= vec3( secondcircle+ pattern);
-combined=secondcircleshape*combined;
-//Make more Circles
-// -----------------------------------------------------------------------------------------------------------------
-
-//Make more Circles
-// -----------------------------------------------------------------------------------------------------------------
-makemousealittlesmoother= vMouse*0.85;
-secondcircle = circleShape(vec2(st.x,st.y),0.035,vec2 (0.25-makemousealittlesmoother.x, 0.06+makemousealittlesmoother.y));
-secondcircleshape= vec3( secondcircle+ pattern);
-combined=secondcircleshape*combined;
-//Make more Circles
-// -----------------------------------------------------------------------------------------------------------------
-
-
-
-//Make more Circles
-// -----------------------------------------------------------------------------------------------------------------
-pattern=step(sin(st.y+bewegungsfaktor*0.005)+tan(st.y-bewegungsfaktor)+tan(st.x/bewegungsfaktor),0.2);
-makemousealittlesmoother= vMouse*0.07;
-secondcircle = circleShape(vec2(st.x,st.y),0.135,vec2 (0.25-makemousealittlesmoother.x, 0.28+makemousealittlesmoother.y));
-secondcircleshape= vec3( secondcircle+ pattern);
-combined=secondcircleshape*combined;
-//Make more Circles
-// -----------------------------------------------------------------------------------------------------------------
-
-
-
-//Make more Circles
-// -----------------------------------------------------------------------------------------------------------------
-makemousealittlesmoother= vMouse*0.07;
-secondcircle = circleShape(vec2(st.x,st.y),0.135,vec2 (0.65-makemousealittlesmoother.x, 0.12+makemousealittlesmoother.y));
-secondcircleshape= vec3( secondcircle+ pattern);
-combined=secondcircleshape*combined;
-//Make more Circles
-// -----------------------------------------------------------------------------------------------------------------
 
 
 
